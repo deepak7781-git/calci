@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="calculator">
-        <input type="text" placeholder="0" id="">
-    
-    <div>
-        <button class="clr">C</button>
-        <button class="clr">DEL</button>
-        <button class="oper">%</button>
-        <button class="oper">/</button>
+        <input type="text" placeholder="0" id="display" readonly>
+
+        <div>
+            <button class="clr" onclick="clearDisplay()">C</button>
+            <button class="clr" onclick="deleteLast()">DEL</button>
+            <button class="oper" onclick="appendValue('%')">%</button>
+            <button class="oper" onclick="appendValue('/')">/</button>
+        </div>
+        <div>
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button class="oper" onclick="appendValue('*')">*</button>
+        </div>
+        <div>
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button class="oper" onclick="appendValue('-')">-</button>
+        </div>
+        <div>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button class="oper" onclick="appendValue('+')">+</button>
+        </div>
+        <div>
+            <button class="oper" onclick="toggleSign()">+/-</button>
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+        </div>
     </div>
-    <div>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="oper">*</button>
-    </div>
-    <div>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="oper">-</button>
-    </div>
-    <div>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="oper">+</button>
-    </div>
-    <div>
-        <button class="oper">+-</button>
-        <button>0</button>
-        <button>.</button>
-        <button class="equals">=</button>
-    </div>
-    </div>
+
+    <script src="cal.js"></script>
 </body>
 </html>
